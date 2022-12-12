@@ -7,6 +7,18 @@ app.get('/pokemon', (req, res)=>{
     
 });
 
+app.set('view engine', 'jsx');
+app.engine('jsx', require('express-react-views'),createEngine());
+
+// show routes
+app.get('/pokemon/:id', (req,res)=>{
+    // res.send(pokemon[req.params.id])
+    res.render('Show', {
+        pokemon: pokemon[req.params.id]
+    })
+});
+
+
 
 
 
