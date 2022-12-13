@@ -1,5 +1,5 @@
 // const React = require('react')
-import React, { component } from 'react';
+import React, { Component } from 'react';
 
 class Show extends React.Component {
    render () {
@@ -8,8 +8,9 @@ class Show extends React.Component {
     return (
       <div>
         <h1>Show Page</h1>
-        <p> The {pokemon.name} is {pokemon.img}</p>
-        <p>{pokemon.readyToPlay ?  'Its is ready to play' : 'It is not ready to play... Cant touch this' }</p>
+        <p> The {pokemon.name} is <img src={pokemon.img} alt={pokemon.name}/></p>
+
+        
       </div>
      );
     }
