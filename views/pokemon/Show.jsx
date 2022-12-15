@@ -3,13 +3,13 @@ import React, { Component } from 'react';
 
 class Show extends React.Component {
    render () {
-    console.log(this.props.pokemon);
-    const pokemon = this.props.pokemon;
+    // console.log(this.props.pokemon);
+    const pokemon  = this.props.pokemon;
     return (
       <div>
-        <h1>Show Page</h1>
-        <img src={pokemon.img}/>
-        <p>The {pokemon.name}</p> 
+        <h1>Gotta Catch 'Em All</h1>
+        <h2>The {pokemon.name}</h2> 
+        <img src={pokemon.img} alt="image"/>
               
         <a href="/pokemon">Back</a>
 
@@ -18,3 +18,6 @@ class Show extends React.Component {
     }
  }
  module.exports = Show;
+
+
+ 
