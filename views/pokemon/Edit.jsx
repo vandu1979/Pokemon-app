@@ -6,7 +6,7 @@ export default class Edit extends Component {
     console.log(pokemon);
     return (
       <div>
-        <h1>Edit Pokemon</h1>
+        <h1>Edit {pokemon.name}</h1>
         {/* the form has default POST method, we use method that with PUT */}
         <form action={`/pokemon/${pokemon._id}?_method=PUT`} method="POST">
           Name: <input type="text" name="name" defaultValue={pokemon.name}/><br/>
@@ -15,6 +15,7 @@ export default class Edit extends Component {
                     
                  <input type="submit" value="submit changes"/>
       </form>
+      <a href='/pokemon/Edit'>Change my mind</a>
       </div>
     )
   }

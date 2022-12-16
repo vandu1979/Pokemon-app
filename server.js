@@ -20,6 +20,28 @@ mongoose.connect(process.env.MONGO_URI, {
 mongoose.connection.once('open', ()=>{
   console.log('connected to mongo');
 })
+app.get('/pokemon/seed', (req, res)=>{
+    const pokemonStarter = [
+    
+        {name: "bulbasaur", img: "https://img.pokemondb.net/artwork/bulbasaur.jpg"},
+        {name: "ivysaur", img: "https://img.pokemondb.net/artwork/ivysaur.jpg"},
+        {name: "venusaur", img: "https://img.pokemondb.net/artwork/venusaur.jpg"},
+        {name: "charmander", img: "https://img.pokemondb.net/artwork/charmander.jpg"},
+        {name: "charizard", img: "https://img.pokemondb.net/artwork/charizard.jpg"},
+        {name: "squirtle", img: "https://img.pokemondb.net/artwork/squirtle.jpg"},
+        {name: "wartortle", img: "https://img.pokemondb.net/artwork/wartortle.jpg"}
+     ];
+
+
+    Pokemon.deleteMany({}).then((data)=>{
+        pokemon.create(seededPokemon).then((data)=>{
+            res.redirect("/pokemon");
+        });
+    });
+    });
+
+
+
 
 // Index
 app.get('/pokemon', (req, res)=>{
@@ -63,6 +85,7 @@ app.get('/pokemon/:id', (req, res)=>{
         });
     })
 })
+//put - Form
 //Edit
 app.get('/pokemon/:id/edit', (req, res)=>{
    //find my pokemon by id
@@ -74,7 +97,7 @@ app.get('/pokemon/:id/edit', (req, res)=>{
         })
     })
 })
-//put 
+//Put Route
 //(Make the PUT Route Update the Model in MongoDB)
 app.put('/pokemon/:id', (req, res)=>{
    

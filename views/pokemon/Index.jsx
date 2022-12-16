@@ -19,14 +19,13 @@ export default class Index extends Component {
     console.log(this.props.pokemon)
     const { pokemon } = this.props;
     return (
-
-       <div style={{backgroundColor: 'aquamarine',
-              display: 'block',
-              margin: '50px',  
-              border: '3px solid black',
-               
-              }}>
-          <nav>
+      <div style={{backgroundColor: 'aquamarine',
+      display: 'block',
+      margin: '50px',  
+      border: '3px solid black',
+       
+      }}>
+      <nav>
             <a style={{color:'ActiveBorder',
                        fontSize:'20px',
                        fontWeight:'bolder',}}href='/pokemon/new'> Create a new pokemon</a>
@@ -35,7 +34,7 @@ export default class Index extends Component {
         textTransform: "uppercase",
         fontWeight:'bold'}}> All pokemon</h>
         {/* array.map(())  p as an individual pokemon of pokemon array */}
-        <ul>
+       
         {pokemon.map((p) => {
           //var nameU = capitalizeFirstLetter(`${p.name}`)
             return (
@@ -51,11 +50,9 @@ export default class Index extends Component {
                <a href={`/pokemon/${p.id}/edit`}>Edit this Pokemon</a>
                 </li>
 
-
-
             )
         })}
-        </ul>
+       
         </div> 
         
     )
