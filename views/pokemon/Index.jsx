@@ -28,21 +28,27 @@ export default class Index extends Component {
           </nav>
         <h style={{color: "red"}}> See All The pokemon!</h>
         {/* array.map(())  p as an individual pokemon of pokemon array */}
+        <ul>
         {pokemon.map((p) => {
           //var nameU = capitalizeFirstLetter(`${p.name}`)
             return (
                 <li>
                 {/* <a href={`/pokemon/${id}`}>{nameU}</a> */}
                 {/* below id is id no. of object in mongodb after connecting */}
-                <a href={`/pokemon/${p.id}`}>{capitalizeFirstLetter(`${p.name}`)}</a>
+                <a href={`/pokemon/${p.id}`}>{capitalizeFirstLetter(`${p.name}`)}</a><br /> 
+                <form action={`/pokemon/${p._id}?_method=Delete`} method="POST">
+                <input type='submit' value='DELETE'/>
+                 </form>
+               <a href={`/pokemon/${p.id}/edit`}>Edit this Pokemon</a>
                 </li>
 
 
 
             )
         })}
+        </ul>
         </div>
     )
   }
 }
-module.exports = Index;
+// module.exports = Index;

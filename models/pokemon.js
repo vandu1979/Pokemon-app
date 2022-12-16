@@ -6,6 +6,7 @@ const pokemonSchema = new mongoose.Schema({
     img:  { type: String, required: true },
   
 });
+//Makesure to use mongoose model connector//(model.find())for example
 
 const Pokemon = mongoose.model('Pokemon', pokemonSchema);
 

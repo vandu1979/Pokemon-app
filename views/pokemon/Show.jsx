@@ -1,4 +1,3 @@
-// const React = require('react')
 import React, { Component } from 'react';
 
 class Show extends React.Component {
@@ -18,6 +17,3 @@ class Show extends React.Component {
     }
  }
  module.exports = Show;
-
-
- 

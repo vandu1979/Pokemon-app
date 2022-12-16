@@ -11,7 +11,7 @@ export default class New extends Component {
 
           image: <input type="text" name="img" src="img" /><br/>
                     
-                       <input type="submit" name="" value="Create Pokemon"/>
+                <input type="submit" name="" value="Create Pokemon"/>
       </form>
       <a href="/pokemon/new">Back to main Page</a>
         
@@ -20,4 +20,4 @@ export default class New extends Component {
   }
 }
 
-module.exports = New;
+// module.exports = New;
