@@ -5,9 +5,13 @@ class Show extends React.Component {
     // console.log(this.props.pokemon);
     const pokemon  = this.props.pokemon;
     return (
-      <div>
-        <h1>Gotta Catch 'Em All</h1>
-        <h2>The {pokemon.name}</h2> 
+      <div> 
+        <h1 style = {{display:'block',
+                       color: 'orangered',
+                       }}>Gotta Catch 'Em All</h1>
+        <h2 style = {{display:'block',
+                       color: 'Highlight',
+                       }}>The {pokemon.name}</h2> 
         <img src={pokemon.img} alt="image"/>
               
         <a href="/pokemon">Back</a>

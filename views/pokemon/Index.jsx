@@ -4,13 +4,12 @@ import React, { Component } from 'react'
 const headerStyle = {
     backgroundColor: "orangered",
 }
-const bodyStyle = {
-    width: "100%",
-    hieght: "50%",
-    backgroundColor: "chartreuse",
-    color: "black",
-
-
+const myStyle = {
+  rectangle: {
+      width: '50px',
+      height: '50px',
+      backgroundColor: "orangered",
+  }
 }
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
@@ -21,12 +20,20 @@ export default class Index extends Component {
     const { pokemon } = this.props;
     return (
 
-      <div>
-        {/* <style style={{backgroundColor: "lightblue"}}></style> */}
+       <div style={{backgroundColor: 'aquamarine',
+              display: 'block',
+              margin: '50px',  
+              border: '3px solid black',
+               
+              }}>
           <nav>
-            <a href='/pokemon/new'> Create a new pokemon</a>
+            <a style={{color:'ActiveBorder',
+                       fontSize:'20px',
+                       fontWeight:'bolder',}}href='/pokemon/new'> Create a new pokemon</a>
           </nav>
-        <h style={{color: "red"}}> See All The pokemon!</h>
+        <h style={{color: "red",fontSize:"24px",
+        textTransform: "uppercase",
+        fontWeight:'bold'}}> All pokemon</h>
         {/* array.map(())  p as an individual pokemon of pokemon array */}
         <ul>
         {pokemon.map((p) => {
@@ -35,7 +42,9 @@ export default class Index extends Component {
                 <li>
                 {/* <a href={`/pokemon/${id}`}>{nameU}</a> */}
                 {/* below id is id no. of object in mongodb after connecting */}
-                <a href={`/pokemon/${p.id}`}>{capitalizeFirstLetter(`${p.name}`)}</a><br /> 
+                <a style={{fontSize:'32px',
+                    color:'blue',
+                    fontWeight:'bold' }}href={`/pokemon/${p.id}`}>{capitalizeFirstLetter(`${p.name}`)}</a><br /> 
                 <form action={`/pokemon/${p._id}?_method=Delete`} method="POST">
                 <input type='submit' value='DELETE'/>
                  </form>
@@ -47,7 +56,8 @@ export default class Index extends Component {
             )
         })}
         </ul>
-        </div>
+        </div> 
+        
     )
   }
 }
