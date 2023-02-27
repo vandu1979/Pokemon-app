@@ -2,6 +2,7 @@ require('dotenv').config();
 const express = require('express');
 const app = express();
 const Pokemon = require('./models/pokemon');
+// const router = require('router');
 const mongoose = require('mongoose');
 const methodOverride = require('method-override');
 // middleware
@@ -10,6 +11,7 @@ app.engine('jsx', require('express-react-views').createEngine());
 
 app.use(express.urlencoded({extended:false}));
 app.use(methodOverride('_method'));
+// app.use('/pokemon', pokemonController);
 // Connect to Mongodb  / remove deprication/ MONGO_URI IS A VARIABLE/ 
 mongoose.set('strictQuery', true);
 mongoose.connect(process.env.MONGO_URI, {

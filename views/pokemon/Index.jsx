@@ -1,6 +1,14 @@
 
 import React, { Component } from 'react'
-
+//HTML Styling
+const bodyStyling = {
+  // display: 'block',
+  margin: '0 auto',
+  backgroundImage: "url('https://wallpaperaccess.com/full/174929.png')",
+  backgroundPosition: 'center',
+  backgroundRepeat: 'no-repeat',
+  backgroundSize: 'cover',
+};
 const headerStyle = {
     backgroundColor: "orangered",
 }
@@ -19,18 +27,21 @@ export default class Index extends Component {
     console.log(this.props.pokemon)
     const { pokemon } = this.props;
     return (
-      <div style={{backgroundColor: 'aquamarine',
+      <html style={bodyStyling}>
+        <body>
+      <div style={{
       display: 'block',
       margin: '50px',  
-      border: '3px solid black',
+      // border: '3px solid black',
        
       }}>
       <nav>
             <a style={{color:'ActiveBorder',
                        fontSize:'20px',
-                       fontWeight:'bolder',}}href='/pokemon/new'> Create a new pokemon</a>
+                       fontWeight:'bolder',}} href='/pokemon/new'> Create a new pokemon</a>
           </nav>
-        <h style={{color: "red",fontSize:"24px",
+        <h style={{color: "red",
+        fontSize:"24px",
         textTransform: "uppercase",
         fontWeight:'bold'}}> All pokemon</h>
         {/* array.map(())  p as an individual pokemon of pokemon array */}
@@ -43,9 +54,9 @@ export default class Index extends Component {
                 {/* below id is id no. of object in mongodb after connecting */}
                 <a style={{fontSize:'32px',
                     color:'blue',
-                    fontWeight:'bold' }}href={`/pokemon/${p.id}`}>{capitalizeFirstLetter(`${p.name}`)}</a><br /> 
+                    fontWeight:'bold' }} href={`/pokemon/${p.id}`}>{capitalizeFirstLetter(`${p.name}`)}</a><br/><br/> 
                 <form action={`/pokemon/${p._id}?_method=Delete`} method="POST">
-                <input type='submit' value='DELETE'/>
+                <input type='submit' value='DELETE'/><br/><br/>
                  </form>
                <a href={`/pokemon/${p.id}/edit`}>Edit this Pokemon</a>
                 </li>
@@ -53,7 +64,9 @@ export default class Index extends Component {
             )
         })}
        
-        </div> 
+        </div>
+        </body>
+        </html> 
         
     )
   }
