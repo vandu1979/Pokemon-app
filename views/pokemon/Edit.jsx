@@ -5,6 +5,13 @@ export default class Edit extends Component {
     const { pokemon } = this.props;
     console.log(pokemon);
     return (
+      <html style={{
+        margin: '0 auto',
+        backgroundImage: `url("https://a-static.besthdwallpaper.com/bulbasaur-wallpaper-1920x1280-26340_38.jpg")`,
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
+      }}>
       <div>
         <h1>Edit {pokemon.name}</h1>
         {/* the form has default POST method, we use method that with PUT */}
@@ -17,6 +24,7 @@ export default class Edit extends Component {
       </form>
       <a href='/pokemon/Edit'>Change my mind</a>
       </div>
+      </html> 
     )
   }
 }
