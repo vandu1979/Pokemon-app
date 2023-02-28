@@ -1,14 +1,14 @@
 
 import React, { Component } from 'react'
 //HTML Styling
-const bodyStyling = {
-  // display: 'block',
-  margin: '0 auto',
-  backgroundImage: "url('https://wallpaperaccess.com/full/174929.png')",
-  backgroundPosition: 'center',
-  backgroundRepeat: 'no-repeat',
-  backgroundSize: 'cover',
-};
+// const bodyStyling = {
+//   // display: 'block',
+//   margin: '0 auto',
+//   backgroundImage: `url("https://wallpaperaccess.com/full/174929.png")`,
+//   backgroundPosition: 'center',
+//   backgroundRepeat: 'no-repeat',
+//   backgroundSize: 'cover',
+// };
 const headerStyle = {
     backgroundColor: "orangered",
 }
@@ -27,7 +27,13 @@ export default class Index extends Component {
     console.log(this.props.pokemon)
     const { pokemon } = this.props;
     return (
-      <html style={bodyStyling}>
+  <html style={{
+    margin: '0 auto',
+    backgroundImage: `url("https://wallpaperaccess.com/full/174929.png")`,
+    backgroundPosition: 'center',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+  }}>
         <body>
       <div style={{
       display: 'block',
@@ -36,7 +42,7 @@ export default class Index extends Component {
        
       }}>
       <nav>
-            <a style={{color:'ActiveBorder',
+            <a style={{color:'black',
                        fontSize:'20px',
                        fontWeight:'bolder',}} href='/pokemon/new'> Create a new pokemon</a>
           </nav>

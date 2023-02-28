@@ -12,7 +12,7 @@ class Show extends React.Component {
         <h2 style = {{display:'block',
                        color: 'Highlight',
                        }}>The {pokemon.name}</h2> 
-        <img src={pokemon.img} alt="Image"/>
+        <img src={pokemon.img} alt="Image"> ::before </img>
               
         <a href="/pokemon">Back</a>
 
