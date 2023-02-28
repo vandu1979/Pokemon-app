@@ -7,7 +7,7 @@ class Show extends React.Component {
     return (
       <html style={{
         margin: '0 auto',
-        backgroundImage: `url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ4JfXflXB9kUENziqy3TfYWpOXVtOEeOAJzg&usqp=CAU")`,
+        backgroundImage: `url("https://c4.wallpaperflare.com/wallpaper/331/338/364/pokemon-wallpaper-preview.jpg")`,
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
