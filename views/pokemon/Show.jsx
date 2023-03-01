@@ -5,13 +5,13 @@ class Show extends React.Component {
     // console.log(this.props.pokemon);
     const pokemon  = this.props.pokemon;
     return (
-      <html style={{
-        margin: '0 auto',
-        backgroundImage: `url("https://c4.wallpaperflare.com/wallpaper/331/338/364/pokemon-wallpaper-preview.jpg")`,
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-      }}>
+      // <html style={{
+      //   margin: '0 auto',
+      //   backgroundImage: `url("https://c4.wallpaperflare.com/wallpaper/331/338/364/pokemon-wallpaper-preview.jpg")`,
+      //   backgroundPosition: 'center',
+      //   backgroundRepeat: 'no-repeat',
+      //   backgroundSize: 'cover',
+      // }}>
       
       <div> 
 
@@ -26,7 +26,7 @@ class Show extends React.Component {
         <a href="/pokemon">Back</a>
 
       </div>
-      </html> 
+      // </html> 
      );
     }
  }
